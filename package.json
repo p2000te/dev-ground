@@ -1,0 +1,18 @@
+{
+  "name": "dev-ground",
+  "version": "1.0.0",
+  "description": "Client-server application for continuous code base expansion",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "node index.js",
+    "build": "node build/build.js"
+  },
+  "keywords": [],
+  "author": "Petar Temnishki <petar.temnishki@gmail.com>",
+  "license": "ISC",
+  "optionalDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1"
+  }
+}

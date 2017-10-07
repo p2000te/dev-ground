@@ -1,0 +1,21 @@
+body { x-sizing: border-box;
+    color: rgb(213, 213, 213);
+    cursor: default;
+    display: block;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 12px;
+    height: 818.4px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    tab-size: 4;
+    user-select: none;
+    width: 760px;
+    background-color: rgb(100, 100, 100);
+}
