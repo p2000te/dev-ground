@@ -1,0 +1,16 @@
+[
+    "arguments",
+    "caller",
+    "callee",
+    "length",
+    "call",
+    "apply",
+    "bind",
+    "prototype",
+    "constructor",
+    "__proto__",
+    "__defineGetter__",
+    "__defineSetter__",
+    "__lookupGetter__",
+    "__lookupSetter__"
+]

@@ -1,41 +1,30 @@
 'use stict';
-//
-//
-//
-//
-//
-
-
 
 var path       =    require('path');
-
-const localRoot = path.resolve(__dirname);
-const localPublicRoot = path.join(appRootAbsPath,'static');
+var localRoot = path.resolve(__dirname);
+var localPublicRoot = path.join(localRoot,'static');
 
 var express     =   require('express');
 var bodyParser  =   require('body-parser');
 
-const server   =  express();
-      server.set( 'localRoot', localRoot );
-      server.set( 'localPublicRoot', localPublicRoot );
+var server   =  express();
 
-const wwwRoot  =  express.static(wwwRootAbsPath);
-const serveStatic = express.Router();
-    setver.set('appRoot', path.resolve(__dirname));
+server.set( 'localRoot', localRoot );
+server.set( 'localPublicRoot', localPublicRoot );
 
-    server.use(bodyParser.json());
-    server.use(bodyParser.urlencoded());
-    server.use( '/static',  );
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded());
+server.use( '/static', express.static(localPublicRoot) );
 
-    server.use('/ftp', function( req, res ) {
-        res.send( 'OK' );
-    });
+server.post('/ftp/:localPath', function( req, res ) {
+    var rel = decodeURIComponent(req.params.localPath);
 
-    server.get( '/', function(req, res){
-        res.location( req.path );
-        res.status( 204 );
-        res.send('NO CONTENT');
-    });
+    res.status(201).send( 'OK' );
+});
+
+server.get( '/', function(req, res){
+    res.redirect('http://127.0.0.1:3000/static/index.html');
+});
 
 server.listen( 3000, '127.0.0.1' );
 /*module.exports = server;*/

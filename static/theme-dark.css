@@ -16,6 +16,28 @@ body { x-sizing: border-box;
     position: relative;
     tab-size: 4;
     user-select: none;
-    width: 760px;
+    width: 100%;
     background-color: rgb(100, 100, 100);
+}
+
+#viewContainer {
+    width: 85%;
+    margin: 15px auto;
+    padding: 0x;
+    border: 1px solid rgb(150,150,220);
+    box-shadow: 1px 1px 1px 2px rgb(30,25,30);
+}
+
+#viewTitle {
+     border: 0 solid rgb(150,150,220);
+     box-shadow: 1px 1px 1px 0 rgb(30,25,30);
+     border-bottom-width: 1px;
+     width: 100%;
+     margin: 0;
+     padding: 0.3em 0;
+     text-indent: 0.5em;
+}
+
+h1, h2, h3 {
+    margin: 0;
 }

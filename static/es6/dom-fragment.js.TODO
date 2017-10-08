@@ -1,0 +1,52 @@
+/*
+	var VirtualElement = class {
+		static get booleanAttributes(){
+			return VirtualElement._booleanAttributes;
+		}
+		static addBoolean(attrName){
+			var va = VirtualElement._booleanAttributes=(VirtualElement._booleanAttributes||[]);
+			if( va.indexOf(attrName)===-1 ){ va.push(attrName); }
+			return va.length;
+		} 
+		constructor( tagName, attrs, content ) {
+			this.tagName = tagName;
+			this.attrs = attrs || {};
+			this.content = content || [];
+		}
+		setAttribute(attrName, value) {
+			var attrs = this.attrs;
+			if( typeof value === 'boolean' ) {
+				VirtualElement.addBoolean(attrName);
+				if( !value ){ delete attrs[attrName]; }
+				else { attrs[attrName]=attrName;  }
+			}
+			attrs[ attrName ] = value;
+		}
+		getAttribute( attrName ) {
+			return this.attrs[attrName];
+		}
+		appendChild(child){
+			this.content.push(child);
+			return this;
+		}
+		create(){
+			var res = document.createElement(this.tagName);
+			_.each(this.attrs, function(val,key){ res.setAttribute(key,val); });
+			var content = this.content;
+			if( typeof content !== 'string' ){
+				content = Array.isArray(content) ? content : Array.of(content);
+				content.forEach(function(child){
+					var c = child.create();
+					res.appendChild(c);
+				});
+			} else {
+				res.textContent = content;
+			}
+			return res;
+		}
+	};
+
+			function onloadCb(){
+				var _ = window._;
+			}
+*/
