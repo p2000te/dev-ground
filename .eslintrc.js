@@ -8,7 +8,7 @@ module.exports = {
         // enable additional rules
         "indent": ["warn", 4],
         "linebreak-style": ["error", "unix"],
-        "quotes": ["warn", "single"],
+        "quotes": ["warn", "double"],
         "semi": ["error", "always"],
 
         // override default options for rules from base configurations
